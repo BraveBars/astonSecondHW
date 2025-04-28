@@ -40,7 +40,6 @@ public class HibernateFactoryUtil {
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);
 
-                // работа через ServiceRegistry т.к. это современный подход для Hibernate 5+
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties())
                         .build();
